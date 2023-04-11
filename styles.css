@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
-
 * {
     box-sizing: border-box;
     outline: none;
@@ -8,7 +6,7 @@
 :root {
     --bg-color: #ffffff;
     --secondary-color: #eef0fa;
-    
+
 }
 
 body {
@@ -31,9 +29,9 @@ body {
     background-color: var(--bg-color);
     display: flex;
     padding: 0% 2%;
-    height:fit-content;
+    height: 980px;
     margin: 1% 4%;
-    align-self:center;
+    align-self: center;
     border-radius: 6px;
     width: 95%;
 }
@@ -41,7 +39,6 @@ body {
 .first-nav {
     width: 30%;
     margin-left: -5%;
-    height: auto;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
     border-right: solid 0.5px var(--secondary-color);
@@ -114,18 +111,20 @@ body {
     display: inline-block;
     size: 100%;
 }
-.ver-dots{
+
+.ver-dots {
     float: right;
     margin-top: 3%;
     margin-right: 3%;
-    font-size:150%;
+    font-size: 150%;
 }
-.hor-dots{
+
+.hor-dots {
     float: right;
     margin-top: 3%;
     margin-right: 3%;
-    font-size:250%;
-    color:#555c66;
+    font-size: 250%;
+    color: #555c66;
 }
 
 .first-img {
@@ -153,7 +152,7 @@ body {
 
 .second-img {
     margin-top: 15%;
-    margin-left: 30%;
+    margin-left: 25%;
     width: 6%;
 }
 
@@ -171,7 +170,7 @@ body {
     color: #353536;
 }
 
-.sec-nav-items {
+/* .sec-nav-items {
     margin-left: 9%;
     font-size: 100%;
     justify-content: center;
@@ -179,7 +178,7 @@ body {
     cursor: pointer;
     padding-left: 3%;
     padding-right: 3%;
-}
+} */
 
 .span-bar a:hover {
     animation: animate ease-in forwards alternate;
@@ -190,24 +189,6 @@ body {
         border-bottom: 3px solid #019e90;
         color: #019e90;
     }
-}
-
-.sec-nav-first-item {
-    font-size: 100%;
-    justify-content: center;
-    color: #8e92a4;
-    cursor: pointer;
-    margin-left: 14%;
-    padding-left: 10%;
-    padding-right: 3%;
-}
-
-.sec-nav-last-item {
-    margin-left: 4%;
-    cursor: pointer;
-    margin-right: 3%;
-    padding-left: 3%;
-    padding-right: 3%;
 }
 
 .Approved {
@@ -238,26 +219,28 @@ body {
     text-align: center;
     padding: 3px 8px;
     border-radius: 18px;
-    display: table-cell;
+    flex: 1;
     border: solid white 5px;
 }
 
-.inner-table {
-    display: table;
+.inner-table,
+.outer-table {
+    flex: 1;
     margin-top: 3%;
     margin-left: 6%;
 }
 
-.inner-table__td {
+.inner-table__td,
+.outer-table__td {
     display: table-row-group;
     height: 30px;
     font-family: 'Open sans';
     color: #777982;
     font-weight: 500;
-
-
+    width: 70%;
 }
 
+.outer-table__td>label,
 .inner-table__td>label {
     display: table-cell;
     width: 100%;
@@ -269,13 +252,6 @@ body {
     margin-top: 10px;
 }
 
-.outer-table__td {
-    display: table-row-group;
-    width: 80%;
-    height: 30px;
-    color: #777982;
-    font-weight: 500;
-}
 
 .Waiting {
     background-color: #f0f1f6;
@@ -283,14 +259,8 @@ body {
     text-align: center;
     padding: 3px 8px;
     border-radius: 16px;
-    display: table-cell;
+    flex: 1;
     border: solid white 5px;
-}
-
-.outer-table__td>label {
-    display: table-cell;
-    width: 95%;
-    justify-items: left;
 }
 
 hr {
@@ -301,12 +271,13 @@ hr {
 }
 
 .span-bar {
-    overflow: hidden;
     border-bottom: solid #dddddd;
     width: 90%;
     justify-content: center;
     margin-left: 7%;
     justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(4, 130px);
 }
 
 .span-bar a {
@@ -330,7 +301,7 @@ hr {
     background-color: #fff1d6;
     box-shadow: #f0f0f0 2px 4px 3px;
     border-radius: 16px;
-    margin-left: 8%;
+    margin-left: 2%;
     margin-top: 6%;
     padding-left: 4%;
     justify-content: center;
@@ -354,7 +325,7 @@ h4 {
     background-color: #d4e6ff;
     box-shadow: #f0f0f0 2px 4px 3px;
     border-radius: 16px;
-    margin-left: 8%;
+    margin-left: 2%;
     margin-top: 6%;
     padding-left: 4%;
     justify-content: center;
@@ -366,7 +337,7 @@ h4 {
     background-color: #ffd9d9;
     box-shadow: #f0f0f0 2px 4px 3px;
     border-radius: 16px;
-    margin-left: 8%;
+    margin-left: 2%;
     margin-top: 6%;
     padding-left: 4%;
     justify-content: center;
@@ -385,7 +356,7 @@ h3 {
     background-color: #daffe5;
     box-shadow: #f0f0f0 2px 4px 3px;
     border-radius: 16px;
-    margin-left: 8%;
+    margin-left: 2%;
     margin-top: 6%;
     padding-left: 4%;
     justify-content: center;
@@ -395,23 +366,34 @@ h3 {
 .fifth-meet {
     border: solid #daffe5;
     background-color: #daffe5;
-    border-top-right-radius: 16px;
-    border-top-left-radius: 16px;
-    margin-left: 8%;
+    border-radius: 16px;
+    margin-left: 2%;
     margin-top: 6%;
-    padding-left: 4%;
+    padding-left: 3%;
     justify-content: center;
     padding-bottom: 5%;
-    height: 3%;
+    margin-bottom: 3%;
 }
 
-@media screen and (min-width:340px) and (max-width:767.98px) {
+.meets {
+    overflow-y: scroll;
+    height: 80%;
+    margin-bottom: 3%;
+}
+
+@media screen and (min-width:360px) and (max-width:767px) {
     .first-nav {
         display: none;
     }
 
     .square {
         flex-direction: column;
+        height: 1350px;
+    }
+
+    .meets {
+        height: 50%;
+        margin-bottom: 1%;
     }
 
     .second-nav {
@@ -421,10 +403,12 @@ h3 {
 
     .third-nav {
         width: 100%;
-        margin-top: auto;
-        height: 50%;
-        margin-bottom: 3%;
+        height: 80%;
+        margin-top: 20%;
+        margin-bottom: 7%;
         display: block;
+        border: none;
+
     }
 
     .inner-table {
@@ -434,33 +418,12 @@ h3 {
 
     .span-bar {
         width: 100%;
-        justify-items: center;
-        margin-left: 0%;
-
-    }
-
-    .sec-nav-items {
-        padding-left: 0%;
-        padding-right: 0%;
-        margin-right: 0%;
-        margin-left: 0%;
-
-
-    }
-
-    .sec-nav-first-item {
-        margin-left: 0%;
-        font-size: 30%;
-    }
-
-    .sec-nav-last-item {
-        padding-right: 0%;
-        margin-right: 1%;
-        margin-left: 1%;
-
+        grid-template-columns: repeat(4, 85px);
+        margin-left: 0;
     }
 
     .third-nav-img {
+        margin-top: 5%;
         margin-left: -68%;
         height: 2%;
 
@@ -473,7 +436,7 @@ h3 {
 
     }
 
-    .di {
+    .third-nav-header {
         display: flex;
         align-items: center;
     }
@@ -498,13 +461,19 @@ h3 {
 
 }
 
-@media screen and (min-width:768px) and (max-width:991.98px) {
+@media screen and (min-width:768px) and (max-width:991px) {
+    .square {
+        height: 700px;
+    }
+
     .first-nav {
         display: none;
     }
 
     .span-bar {
         width: 90%;
+        grid-template-columns: repeat(4, 100px);
+
     }
 
     .sec-nav-items {
@@ -527,19 +496,23 @@ h3 {
 
     .third-nav {
         width: 30%;
+        display: block;
     }
+
     .num-button {
-       padding: 2% 4%;
+        padding: 2% 4%;
 
     }
 }
-@media screen and (max-width:360px) {
+
+@media screen and (min-width:321px) and (max-width:360px) {
     .first-nav {
         display: none;
     }
 
     .square {
         flex-direction: column;
+        height: 1150px;
     }
 
     .second-nav {
@@ -550,9 +523,11 @@ h3 {
     .third-nav {
         width: 100%;
         margin-top: auto;
-        height: 50%;
-        margin-bottom: 3%;
         display: block;
+        width: 100%;
+        height: 80%;
+        margin-bottom: 2%;
+        border: none;
     }
 
     .inner-table {
@@ -591,6 +566,7 @@ h3 {
         margin-left: -68%;
         height: 2%;
 
+
     }
 
     .num-button {
@@ -600,7 +576,7 @@ h3 {
 
     }
 
-    .di {
+    .third-nav-header {
         display: flex;
         align-items: center;
     }
@@ -622,5 +598,84 @@ h3 {
     }
 
 
+
+}
+
+@media screen and (max-width:320px) {
+    .first-nav {
+        display: none;
+    }
+
+    .square {
+        flex-direction: column;
+        height: 1200px;
+    }
+
+    .second-nav {
+        width: 100%;
+        height: 50%;
+    }
+
+    .third-nav {
+        width: 100%;
+        margin-top: auto;
+        display: block;
+        width: 100%;
+        height: 40%;
+        margin-bottom: 11%;
+        border: none;
+    }
+
+    .inner-table {
+        margin-left: 0%;
+        font-size: 80%;
+
+    }
+
+    .span-bar {
+        width: 100%;
+        justify-items: center;
+        margin-left: 0;
+        grid-template-columns: repeat(4, 70px);
+    }
+
+
+
+
+
+    .third-nav-img {
+        margin-left: -68%;
+        height: 2%;
+
+
+    }
+
+    .num-button {
+        margin-left: 4%;
+        padding-top: -2%;
+        padding-bottom: -10%;
+
+    }
+
+    .third-nav-header {
+        display: flex;
+        align-items: center;
+    }
+
+    .Schedule {
+        margin: 8% 2%;
+        color: #5e606b;
+
+    }
+
+    .first-meet,
+    .sec-meet,
+    .third-meet,
+    .fourth-meet,
+    .fifth-meet {
+        margin-left: 1%;
+        margin-right: 1%;
+        height: min-content;
+    }
 
 }
